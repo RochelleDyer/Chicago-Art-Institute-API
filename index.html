@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src ='main.js' defer></script>
+    <title>Chicago Art Institute API</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--1" id="fig1" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/A Sunday on La Grande Jatte.jpg" alt="A Sunday on La Grande Jatte Georges Seurat" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--2" id="fig2" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/American Gothic.jpg" alt="American Gothic Grant Wood" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--3" id="fig3" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/Blue and Green Music.jpg" alt="Blue and Green Music Georgia o'Keefe" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--4" id="fig4" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/Drawing Hands.jpg" alt="Drawing Hands MC Escher" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--5" id="fig5" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/Fish.jpg" alt="Fish Edouard Manet" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--6" id="fig6" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/Marilyn Monroe.jpg" alt="Marilyn Monroe Andy Warhol" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--7" id="fig7" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/Nighthawks.jpg" alt="Nighthawks Edward Hopper" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--8" id="fig8" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/Self-Portrait.jpg" alt="Self-Portrait Vincent Van Gogh" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--9" id="fig9" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/The Old Guitarist.jpg" alt="The Old Guitarist Pablo Picasso" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--10" id="fig10" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/Water Lilies.jpg" alt="Water Lilies Claude Monet" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--11" id="fig11" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/Gobba.jpg" alt="Gobba Frank Stella" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--12" id="fig12" onclick="event.stopPropagation(); getArt(this.id, event)">
+                <img src="/images/Inventions of the Monsters.jpg" alt="Inventions of the Monsters Salvador Dali" class="gallery__img">
+            </figure>
+        </div>
+    </div>
+    
+    <div id="myGallery1" class="artgallery">
+        <div class="artgallery-content" id="gallery1">
+          <span class="close" onclick="stopDisplay(1);">&times;</span>
+          <img src=""class="gallery-content" id="img1">
+          <p class="caption">Title: A Sunday on La Grande Jatte - 1884.</p>
+          <p class="caption">Artist: Georges Seurat.</p>
+          <p class="caption">Medium: Oil on Canvas.</p>
+          <p class="caption">Reference Number: 1926.224.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery2" class="artgallery">
+        <div class="artgallery-content" id="gallery2">
+          <span class="close" onclick="stopDisplay(2);">&times;</span>
+          <img src=""class="gallery-content" id="img2">
+          <p class="caption">Title: American Gothic.</p>
+          <p class="caption">Artist: Grant Wood.</p>
+          <p class="caption">Medium: Oil on Beaver Board.</p>
+          <p class="caption">Reference Number: 1930.934.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery3" class="artgallery">
+        <div class="artgallery-content" id="gallery3">
+          <span class="close" onclick="stopDisplay(3);">&times;</span>
+          <img src=""class="gallery-content" id="img3">
+          <p class="caption">Title: Blue and Green Music.</p>
+          <p class="caption">Artist: Georgia O'Keefe.</p>
+          <p class="caption">Medium: Oil on Canvas.</p>
+          <p class="caption">Reference Number: 1969.835.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery4" class="artgallery">
+        <div class="artgallery-content" id="gallery4">
+          <span class="close" onclick="stopDisplay(4);">&times;</span>
+          <img src=""class="gallery-content" id="img4">
+          <p class="caption">Title: Drawing Hands.</p>
+          <p class="caption">Artist: MC Escher.</p>
+          <p class="caption">Medium: Lithograph on White Wove Paper.</p>
+          <p class="caption">Reference Number: 1987.199.11.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery5" class="artgallery">
+        <div class="artgallery-content" id="gallery5">
+          <span class="close" onclick="stopDisplay(5);">&times;</span>
+          <img src=""class="gallery-content" id="img5">
+          <p class="caption">Title: Fish (Still-Life).</p>
+          <p class="caption">Artist: Edouard Manet.</p>
+          <p class="caption">Medium: Oil on Canvas.</p>
+          <p class="caption">Reference Number: 1942.311.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery6" class="artgallery">
+        <div class="artgallery-content" id="gallery6">
+          <span class="close" onclick="stopDisplay(6);">&times;</span>
+          <img src=""class="gallery-content" id="img6">
+          <p class="caption">Title: Marilyn Monroe.</p>
+          <p class="caption">Artist: Andy Warhol.</p>
+          <p class="caption">Medium: Color Screenprint on Cream Card.</p>
+          <p class="caption">Reference Number: 1998.442.10.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery7" class="artgallery">
+        <div class="artgallery-content" id="gallery7">
+          <span class="close" onclick="stopDisplay(7);">&times;</span>
+          <img src=""class="gallery-content" id="img7">
+          <p class="caption">Title: Nighthawks.</p>
+          <p class="caption">Artist: Artist: Edward Hopper.</p>
+          <p class="caption">Medium: Oil on Canvas.</p>
+          <p class="caption">Reference Number: 1942.51.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery8" class="artgallery">
+        <div class="artgallery-content" id="gallery8">
+          <span class="close" onclick="stopDisplay(8);">&times;</span>
+          <img src=""class="gallery-content" id="img8">
+          <p class="caption">Title: Self-Portrait.</p>
+          <p class="caption">Artist: Vincent Van Gogh.</p>
+          <p class="caption">Medium: Oil on Artist's Board.</p>
+          <p class="caption">Reference Number: 1954.326.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery9" class="artgallery">
+        <div class="artgallery-content" id="gallery9">
+          <span class="close" onclick="stopDisplay(9);">&times;</span>
+          <img src=""class="gallery-content" id="img9">
+          <p class="caption">Title: The Old Guitarist.</p>
+          <p class="caption">Artist: Pablo Picasso.</p>
+          <p class="caption">Medium: Oil on Panel.</p>
+          <p class="caption">Reference Number 1926.253.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>    
+
+    <div id="myGallery10" class="artgallery">
+        <div class="artgallery-content" id="gallery10">
+          <span class="close" onclick="stopDisplay(10);">&times;</span>
+          <img src=""class="gallery-content" id="img10">
+          <p class="caption">Title: Water Lilies.</p>
+          <p class="caption">Artist: Claude Monet.</p>
+          <p class="caption">Medium: Oil on Canvas.</p>
+          <p class="caption">Reference Number: 1933.1157.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery11" class="artgallery">
+        <div class="artgallery-content" id="gallery11">
+          <span class="close" onclick="stopDisplay(11);">&times;</span>
+          <img src=""class="gallery-content" id="img11">
+          <p class="caption">Title: Gobba, zoppa e collotorto.</p>
+            <p class="caption">Artist: Frank Stella.</p>
+            <p class="caption">Medium: Oil, urethane enamel, fluorescent alkyd, acrylic, and 
+                printing ink on etched magnesium and aluminium.</p>
+            <p class="caption">Reference Number: 1986.93.</p>
+            <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+
+    <div id="myGallery12" class="artgallery">
+        <div class="artgallery-content" id="gallery12">
+          <span class="close" onclick="stopDisplay(12);">&times;</span>
+          <img src=""class="gallery-content" id="img12">
+          <p class="caption">Title: Inventions of the Monsters.</p>
+          <p class="caption">Artist: Salvador Dali.</p>
+          <p class="caption">Medium: Oil on Canvas.</p>
+          <p class="caption">Reference Number: 1943.798.</p>
+          <p class="caption">Location: The Art Institute of Chicago.</p>
+        </div>
+    </div>
+</body>
+</html>
